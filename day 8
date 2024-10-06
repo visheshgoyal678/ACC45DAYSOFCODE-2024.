@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T; 
+    
+    while (T--) {
+        int P, Q, R, S;
+        cin >> P >> Q >> R >> S;  
+        int total = P + Q + R + S;
+
+
+        if (P > (total - P) || Q > (total - Q) || R > (total - R) || S > (total - S)) {
+            cout << "YES" << endl; 
+        } else {
+            cout << "NO" << endl; //
+        }
+    }
+    
+    return 0;
+}
