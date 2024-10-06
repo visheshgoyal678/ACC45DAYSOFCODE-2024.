@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t); 
+    while(t--) {
+        int x, y;
+        scanf("%d %d", &x, &y);
+        if(x >= y)
+            printf("0\n");
+        else {
+            int temp = y / x;
+            if(temp * x == y)
+                printf("%d\n", temp - 1);
+            else
+                printf("%d\n", temp);
+        }
+    }
+
+    return 0;
+}
