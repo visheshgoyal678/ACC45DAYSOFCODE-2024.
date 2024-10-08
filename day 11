@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); 
+    int results[T];
+
+    for (int i = 0; i < T; ++i) {
+        int X, Y;
+        scanf("%d %d", &X, &Y);
+
+        if (Y >= X) {
+            results[i] = Y - X; 
+        } else {
+            results[i] = (X - Y + 1) / 2; 
+        }
+    }
+
+    
+    for (int i = 0; i < T; ++i) {
+        printf("%d\n", results[i]);
+    }
+
+    return 0;
+}
