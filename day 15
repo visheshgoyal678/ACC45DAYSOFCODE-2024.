@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int min_bags_needed(int N, int K, int M) {
+    return (N + K * M - 1) / (K * M);
+}
+
+int main() {
+    int T;
+    cin >> T;
+    while (T--) {
+        int N, K, M;
+        cin >> N >> K >> M;
+        cout << min_bags_needed(N, K, M) << endl;
+    }
+    return 0;
+}
