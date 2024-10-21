@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int total_time_for_tournament(int N, int A, int B) {
+    
+    int number_of_rounds = (int)(log2(N));
+    
+    
+    int total_time = (number_of_rounds * A) + ((number_of_rounds - 1) * B);
+    
+    return total_time;
+}
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    
+    while (T--) {
+        int N, A, B;
+        scanf("%d %d %d", &N, &A, &B);
+        printf("%d\n", total_time_for_tournament(N, A, B));
+    }
+    
+    return 0;
+}
