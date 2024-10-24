@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        int H, X, Y;
+        scanf("%d %d %d", &H, &X, &Y);
+
+      
+        int remaining_health_after_special = H - Y;
+        int attacks_with_special_first;
+
+        if (remaining_health_after_special <= 0) {
+            attacks_with_special_first = 1;
+        } else {
+            attacks_with_special_first = 1 + (int)ceil((double)remaining_health_after_special / X);
+        }
+        int attacks_with_regular_only = (int)ceil((double)H / X);
+
+      
+        int min_attacks_needed = attacks_with_special_first < attacks_with_regular_only
+                                 ? attacks_with_special_first
+                                 : attacks_with_regular_only;
+
+        
+        printf("%d\n", min_attacks_needed);
+    }
+
+    return 0;
+}
