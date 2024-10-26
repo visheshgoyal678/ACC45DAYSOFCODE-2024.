@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int T; // number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int N;
+        scanf("%d", &N);
+
+        int count_start38 = 0;
+        int count_ltime108 = 0;
+
+        for (int i = 0; i < N; i++) {
+            char code[9];
+            scanf("%s", code); 
+            if (strcmp(code, "START38") == 0) {
+                count_START38++;
+            } else if (strcmp(code, "LTIME108") == 0) {
+                count_LTIME108++;
+            }
+        }
+
+        
+        printf("%d %d\n", count_START38, count_LTIME108);
+    }
+
+    return 0;
+}
