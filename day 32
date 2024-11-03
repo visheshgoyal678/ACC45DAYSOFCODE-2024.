@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int N; 
+    scanf("%d", &N);
+    
+    int cumulative_score_player1 = 0;
+    int cumulative_score_player2 = 0;
+    int max_lead = 0;
+    int winner = 0;
+
+    for (int i = 0; i < N; i++) {
+        int score1, score2;
+        scanf("%d %d", &score1, &score2);
+        
+        
+        cumulative_score_player1 += score1;
+        cumulative_score_player2 += score2;
+
+        
+        if (cumulative_score_player1 > cumulative_score_player2) {
+            int lead = cumulative_score_player1 - cumulative_score_player2;
+            if (lead > max_lead) {
+                max_lead = lead;
+                winner = 1;
+            }
+        } else {
+            int lead = cumulative_score_player2 - cumulative_score_player1;
+            if (lead > max_lead) {
+                max_lead = lead;
+                winner = 2; 
+            }
+        }
+    }
+
+   
+    printf("%d %d\n", winner, max_lead);
+    
+    return 0;
+}
