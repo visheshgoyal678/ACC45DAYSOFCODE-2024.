@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int T;  
+    scanf("%d", &T);
+    
+    while (T--) {
+        int N, A, B; 
+        scanf("%d %d %d", &N, &A, &B);
+        
+      
+        int rounds = (int)(log2(N));
+        
+        
+       
+        int total_time = total_round_time + total_break_time;
+        
+        
+        printf("%d\n", total_time);
+    }
+
+    return 0;
+}
