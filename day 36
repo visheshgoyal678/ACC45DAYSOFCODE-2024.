@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int T;  
+    scanf("%d", &T);  
+
+    while (T--) {
+        int N; 
+        scanf("%d", &N); 
+        
+       
+        int full_weeks = N / 7;
+        
+        
+        int extra_days = N % 7;
+        
+        
+        int tuesday_count = full_weeks + (extra_days >= 2 ? 1 : 0);
+        
+        
+        printf("%d\n", tuesday_count);
+    }
+
+    return 0;
+}
